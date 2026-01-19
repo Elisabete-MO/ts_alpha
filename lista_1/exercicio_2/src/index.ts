@@ -6,7 +6,22 @@ function contarPalavras(texto: string): number {
   return texto.trim().split(/\s+/).length;
 }
 
-console.log(contarPalavras("Olá mundo"));               // 2
-console.log(contarPalavras("TypeScript é muito legal")); // 4
-console.log(contarPalavras("   muitos   espaços   "));   // 2
-console.log(contarPalavras(""));                         // 0
+console.log(
+  "Frase: \"Olá Mundo\" \nTotal de palavras: " +
+  contarPalavras("Olá mundo") +
+  "\n"); // 2
+
+console.log(
+  "Frase: \"TypeScript é muito legal\" \nTotal de palavras: " +
+  contarPalavras("TypeScript é muito legal") +
+  "\n"); // 4
+
+console.log(
+  "Frase: \"   muitos   espaços  \" \nTotal de palavras: " +
+  contarPalavras("   muitos   espaços   ") +
+  "\n");   // 2
+
+console.log(
+  "Frase:  \" \" \nTotal de palavras: " +
+  contarPalavras("") +
+  "\n");  // 0
