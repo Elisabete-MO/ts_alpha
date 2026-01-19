@@ -1,11 +1,11 @@
 {
-  "name": "email-validator-project",
+  "name": "exercicio-2",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc --target ES2020 index.ts",
-    "start": "npm run build && node index.js",
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
