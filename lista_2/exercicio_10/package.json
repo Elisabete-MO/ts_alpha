@@ -1,0 +1,19 @@
+{
+  "name": "exercicio-10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Crie um projeto em TypeScript, instalando as dependências que julgar necessárias.  Envie um arquivo compactado contendo:  - o projeto sem o node_modules;  - um arquivo PDF mostrando um passo a passo com o build e a execução do código.",
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
