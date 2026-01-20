@@ -1,0 +1,18 @@
+import { CalculadoraCientifica } from "./CalculadoraCientifica.js";
+import { CalculadoraFinanceira } from "./CalculadoraFinanceira.js";
+console.log("===== CALCULADORA CIENTÍFICA =====");
+const calcCientifica = new CalculadoraCientifica();
+console.log("Soma: (10, 5)", calcCientifica.somar(10, 5));
+console.log("Subtração: (10, 5)", calcCientifica.subtrair(10, 5));
+console.log("Multiplicação: (10, 5)", calcCientifica.multiplicar(10, 5));
+console.log("Divisão: (10, 5)", calcCientifica.dividir(10, 5));
+console.log("Potência (4^2):", calcCientifica.potencia(4, 2));
+console.log("Fatorial de 5:", calcCientifica.fatorial(5));
+console.log("\n===== CALCULADORA FINANCEIRA =====");
+const calcFinanceira = new CalculadoraFinanceira();
+console.log("Soma: (100, 50)", calcFinanceira.somar(100, 50));
+console.log("Subtração:(100, 50)", calcFinanceira.subtrair(100, 50));
+console.log("Multiplicação: (100, 2)", calcFinanceira.multiplicar(100, 2));
+console.log("Divisão: (100, 2)", calcFinanceira.dividir(100, 2));
+console.log("Juros Simples: (1000, 0.05, 2)", calcFinanceira.jurosSimples(1000, 0.05, 2));
+console.log("Juros Compostos: (1000, 0.05, 2)", calcFinanceira.jurosCompostos(1000, 0.05, 2));
