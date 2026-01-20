@@ -1,4 +1,4 @@
-# # 🟦 Exercícios de TypeScript
+# 🟦 Exercícios de TypeScript
 
 Este repositório contém exercícios práticos de **TypeScript**, desenvolvidos durante minhas aulas. Cada exercício explora conceitos fundamentais da linguagem, como:
 
