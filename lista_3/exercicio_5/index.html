@@ -1,0 +1,43 @@
+<em></em><!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Galeria de Cachorros 🐶</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Galeria de Cachorros 🐕</h1>
+
+    <div class="controls">
+      <input type="number" id="quantidade" placeholder="Quantidade de fotos" min="1" />
+      <button id="buscar">Buscar</button>
+      <button id="limpar">Limpar</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="galeria" class="galeria"></div>
+
+    <div id="paginacao" class="paginacao"></div>
+  </main>
+
+  <!-- Modal de imagem -->
+  <div id="modalImagem" class="modal">
+    <img id="imagemModal" />
+  </div>
+
+  <!-- Modal de erro -->
+  <div id="modalErro" class="modal">
+    <div class="modal-content">
+      <p id="mensagemErro"></p>
+    </div>
+  </div>
+
+  <script src="./dist/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+header {
+  background: #ff9800;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+.controls input,
+.controls button {
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.controls button {
+  cursor: pointer;
+  background: #fff;
+}
+
+.galeria {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.paginacao {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.paginacao button {
+  margin: 0 0.3rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
