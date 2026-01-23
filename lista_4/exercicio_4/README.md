@@ -3,15 +3,32 @@
 Crie um projeto em TypeScript, instalando as dependências que julgar necessárias. 
 Envie um arquivo compactado contendo: 
 - o projeto sem o node_modules; 
-- um arquivo PDF mostrando um passo a passo com o build e a execução do código. 
+- um arquivo PDF mostrando requisições para cada uma das rotas que foram desenvolvidas.
  
 Orientações sobre o projeto: 
-- Desenvolva uma página web Galeria de Cachorros. Utilize a The Dog Api (https://thedogapi.com/). Consiga uma api key válida.
-- No topo da página deve existir: um input que recebe a quantidade desejada de fotos de cachorros; um botão botão para fazer a busca; e um botão para “limpar” a galeria, deixando-a vazia. 
-- Caso o número informado seja maior que 10, a galeria deve aplicar paginação. Por exemplo, supondo que o usuário deseje 25 fotos de cachorro, deve aparecer 10 fotos e, em algum local da galeria, deve estar indicado que aquela é a primeira página de 3 (10 na primeira, 10 na segunda e 5 na terceira). Além disso, deve haver algum tipo de recurso que permita o usuário alternar entre as páginas.
-- Caso o usuário clique em alguma imagem da galeria, um modal deve ser aberto, mostrando a imagem clicada com um tamanho maior. Clicar fora do modal faz com que ele seja fechado.
-- A página deve ser visualmente atraente.
-- No Front-End do seu projeto, implemente a validação do campo de entrada referente à quantidade de fotos. Deve receber apenas números positivos. Verifique na documentação da API se existe um limite superior. Caso exista, adicione essa condição na validação. Caso o usuário insira um valor inválido e pressione o botão de buscar as imagens, ele deve receber uma mensagem adequada em formato de modal, indicando os limites válidos.
-- Não é necessário implementar um servidor para servir o Front-End. É permitido utilizar a extensão Live Server.
-- O PDF com o passo a passo deve conter comentários e imagens demonstrando todas as funcionalidades exigidas.
-Todo o código precisa estar fortemente tipado.
+- Desenvolver o Back-End de uma aplicação que permite cadastrar usuário, listar todos os usuários, atualizar usuário, excluir usuário, fazer login e fazer logout. 
+- Utilizar o SQLite como gerenciador de banco de dados relacional. Deve-se criar uma tabela “users” com as colunas: “id”, “email”, “name” e “password”. Para registrar ou atualizar um novo usuário, algumas validações devem ser realizadas: 
+- O campo “name” deve aceitar apenas letras e espaços em branco, e ter no mínimo 4 caracteres (desconsiderando os espaços em branco). 
+- O campo “emaill” deve seguir um padrão válido. 
+- O campo “password” deve conter pelo menos uma letra e um número, e ter no mínimo 8 caracteres de comprimento. 
+- Requisições para o servidor com um ou mais campos que não estejam de acordo com os critérios especificados, devem receber uma resposta apropriada. 
+- Todo o código precisa estar fortemente tipado.
+- As rotas que devem ser implementadas: 
+
+1. Cadastro - POST /users/ 
+  Recebe: name, email e password; 
+  Retorna: id, name, email; 
+2. Login - POST /login/ 
+  Recebe: email e password; 
+  Retorna: id; 
+3. Cookie: token = sessionID; 
+  Logout - DELETE /logout/ 
+  Remove o cookie; 
+4. Atualiza usuário - PATCH (autenticada) /users/:id 
+  Recebe: name, email e/ou password (não é obrigatório informar todos os campos); 
+  Retorna: id, name e email; 
+5. Remove usuário - DELETE (autenticada) /users/:id 
+  Retorna: id, name e email do usuário excluído;
+6. Lista todos os usuários - GET /users/ 
+  Retorna: id, name e email de todos os usuários. 
+- O PDF deve apresentar cada rota que você executou, fornecendo exemplos tanto de requisições bem-sucedidas, quanto de falhas, permitindo uma visualização clara da validação em ação. Utilize o Postman ou o Insomnia para realizar as requisições.
